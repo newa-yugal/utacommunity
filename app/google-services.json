@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "768661931860",
+    "firebase_url": "https://uta-community.firebaseio.com",
+    "project_id": "uta-community",
+    "storage_bucket": "uta-community.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768661931860:android:3cf92a42337f286108aac1",
+        "android_client_info": {
+          "package_name": "com.example.utacommunity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "768661931860-1cptke0o2ieo391ika8orl8k3jofa5lg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmymlGWIw04HJ3ElHM0Ec7X5oNioIlZ9E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "768661931860-1cptke0o2ieo391ika8orl8k3jofa5lg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
