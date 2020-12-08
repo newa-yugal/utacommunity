@@ -34,6 +34,7 @@ public class Login<SessionManager, DatabaseHandler> extends AppCompatActivity {
     EditText mUser, mPassword;
     Button mForgotPassword, mLogin, mRegister;
     FirebaseAuth fAuth;
+    int count = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,11 +81,23 @@ public class Login<SessionManager, DatabaseHandler> extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Toast.makeText(Login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(),MainActivity.class));
-                        }else{
+                        }else if(count > 0){
                             Toast.makeText(Login.this, "Error! "+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            count--;
+                            Toast.makeText(Login.this, "You have " +count+"tries", Toast.LENGTH_SHORT).show();
+                        }else{
+                            Toast.makeText(Login.this, "Please reset your password", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(),forgotpassword.class));
                         }
                     }
                 });
+            }
+        });
+
+        mForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(),forgotpassword.class));
             }
         });
 

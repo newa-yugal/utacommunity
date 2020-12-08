@@ -111,7 +111,7 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
 
             }
         });
